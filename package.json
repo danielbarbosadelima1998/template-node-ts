@@ -5,9 +5,16 @@
   "author": "Daniel Barbosa de Lima <daniel.lima@ikatec.com.br>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only --ignore /node_modules --no-notify src/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only --ignore /node_modules --no-notify src/server.ts",
+    "build": "rm -rf dist && babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
+    "start": "node dist/server.js"
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-typescript": "^7.13.0",
     "@types/express": "^4.17.11",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.24.1-alpha.16",
