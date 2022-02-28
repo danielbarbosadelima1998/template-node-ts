@@ -1,7 +1,7 @@
 # template-node-ts
 Template para apis node com typescript
 
-# Técnologias utilizadas:
+# Tecnologias utilizadas:
 Babel, 
 typescript,
 express,
